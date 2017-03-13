@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/popup_background"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:text="Cost: 80kr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="17dp"
+            android:id="@+id/total_dish_cost"
+            android:textSize="17sp"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_toEndOf="@+id/imageView6" />
+
+        <TextView
+            android:text="Crostini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:gravity="center"
+            android:layout_marginTop="44dp"
+            android:id="@+id/textView17"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true" />
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:id="@+id/view2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="0dp"
+            android:layout_below="@+id/textView17" />
+
+        <ImageView
+            android:src="@drawable/icecream"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="31dp"
+            android:id="@+id/imageView6"
+            android:layout_below="@+id/view2"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:text="(20kr / Person)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cost_per_person"
+            android:textSize="14sp"
+            android:layout_below="@+id/total_dish_cost"
+            android:layout_toEndOf="@+id/imageView6"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:text="Choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/select_dish_button" />
+    </RelativeLayout>
+
+    <TextView
+        android:text="X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/closeButton"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_style"
+        android:clickable="true"
+        android:textSize="30dp"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

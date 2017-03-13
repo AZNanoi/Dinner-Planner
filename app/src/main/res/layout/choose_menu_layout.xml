@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/action_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/choose_menu_layout_id"
+        >
+
+        <TextView
+            android:text="Participants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView1"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="0 pers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_alignTop="@+id/textView1"
+            android:id="@+id/numberOfGuests"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/textView1"/>
+
+        <TextView
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/minusButton"
+            android:paddingRight="14dp"
+            android:paddingLeft="14dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_style"
+            android:clickable="true"
+            android:textSize="30dp"
+            android:layout_alignStart="@+id/textView1"
+            android:layout_below="@+id/textView1" />
+
+        <Spinner
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:entries="@array/numberOfGuests"
+            android:prompt="@string/noGuests_prompt"
+            android:layout_toEndOf="@+id/minusButton"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:text="+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plusButton"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_style"
+            android:clickable="true"
+            android:textSize="30dp"
+            android:layout_alignTop="@+id/minusButton"
+            android:layout_toEndOf="@+id/spinner" />
+
+        <TextView
+            android:text="Total Cost: 0kr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_alignParentRight="true"
+            android:id="@+id/totalCost"
+            android:layout_alignBottom="@+id/spinner"
+            android:textStyle="normal|bold"
+            android:textSize="15sp" />
+
+        <TextView
+            android:text="Choose Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="24sp"
+            android:layout_below="@+id/minusButton"
+            android:layout_alignStart="@+id/textView1"
+            android:layout_marginTop="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_height="0.5dp"
+            android:background="#000000"
+            android:id="@+id/horLine"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/mainCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/starter"
+            android:layout_alignStart="@+id/textView1"
+            android:layout_alignEnd="@+id/horLine"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:text="Main Course"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/mainCourseTitle"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainCourseTitle">
+                <LinearLayout
+                    android:id="@+id/mainCourseListItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <pl.droidsonroids.gif.GifImageView
+                        android:tag="loader"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/animated_progress"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dessert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainCourse"
+            android:layout_alignStart="@+id/textView1"
+            android:layout_alignEnd="@+id/horLine"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Dessert"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/dessertTitle"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dessertTitle">
+                <LinearLayout
+                    android:id="@+id/dessertListItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <pl.droidsonroids.gif.GifImageView
+                        android:tag="loader"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/animated_progress"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <Button
+            android:text="Create"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/create_menu_button"
+            android:textSize="14sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/starter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/horLine"
+            android:layout_alignStart="@+id/horLine">
+
+            <TextView
+                android:text="Starter"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/starterTitle"
+                android:textSize="18sp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/starterTitle">
+
+                <LinearLayout
+                    android:id="@+id/starterListItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <pl.droidsonroids.gif.GifImageView
+                        android:tag="loader"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/animated_progress"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

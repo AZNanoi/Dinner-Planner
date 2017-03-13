@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dinner Planner</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="welcome_message">
+        Welcome to Dinner Planner!\n\nHere you will be able to easily plan\nyour dinner.\n\nOn the next page start by\nselecting number of participants.\nThen select your courses.\n\nWatch Magic Happen!
+    </string>
+
+    <string name="noGuests_prompt">0</string>
+    <string-array name="numberOfGuests">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="ingredients">Ingredients</string>
+    <string name="starter">Starter</string>
+    <string name="main_course">Main Course</string>
+    <string name="dessert">Dessert</string>
+
+</resources>

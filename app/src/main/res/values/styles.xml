@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">#b72018</item>
+        <!--<item name="android:actionBarStyle">@style/AppTheme.Light.ActionBar</item>-->
+</style>
+
+<!-- Transparent ActionBar Style
+<style name="AppTheme.Light.ActionBar" parent="@android:style/Widget.Holo.ActionBar">
+    <item name="android:background">#9d1c15</item>
+</style>
+-->
+
+</resources>

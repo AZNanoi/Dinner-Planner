@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/menu_layout_id">
+
+            <ImageView
+                android:src="@drawable/empty_image"
+                android:scaleType="fitXY"
+                android:id="@+id/dessert_dish"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignTop="@+id/starter_dish"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"/>
+
+            <ImageView
+                android:src="@drawable/empty_image"
+                android:scaleType="fitXY"
+                android:id="@+id/main_dish"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="12dp"
+                android:layout_alignTop="@+id/dessert_dish"
+                android:layout_toStartOf="@+id/dessert_dish"
+                android:clickable="true"/>
+
+            <ImageView
+                android:src="@drawable/empty_image"
+                android:layout_marginTop="44dp"
+                android:id="@+id/starter_dish"
+                android:scaleType="fitXY"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/back_button"
+                android:layout_toStartOf="@+id/main_dish"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"/>
+
+            <Button
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/back_button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="11dp" />
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dip"
+                android:background="#000000"
+                android:layout_marginTop="34dp"
+                android:id="@+id/view"
+                android:layout_below="@+id/dessert_dish"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:text="Ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView14"
+                android:gravity="center"
+                android:layout_below="@+id/ingredient"
+                android:layout_alignStart="@+id/ingredient"
+                android:layout_alignEnd="@+id/ingredient"/>
+
+            <TextView
+                android:text="starter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/starter_dish_name"
+                android:layout_below="@+id/starter_dish"
+                android:gravity="center"
+                android:layout_alignStart="@+id/starter_dish"
+                android:layout_alignEnd="@+id/starter_dish"/>
+
+            <TextView
+                android:text="main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_dish_name"
+                android:gravity="center"
+                android:layout_below="@+id/main_dish"
+                android:layout_alignStart="@+id/main_dish"
+                android:layout_alignEnd="@+id/main_dish"/>
+        <!-- TODO: Rounded ingredient image -->
+            <TextView
+                android:text="dessert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dessert_dish_name"
+                android:gravity="center"
+                android:layout_below="@+id/dessert_dish"
+                android:layout_alignStart="@+id/dessert_dish"
+                android:layout_alignEnd="@+id/dessert_dish"/>
+
+            <TextView
+                android:text="Ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:id="@+id/textDisplayTitle"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:layout_below="@+id/view"
+                android:layout_alignStart="@+id/back_button" />
+
+            <TextView
+                android:text="x pers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberOfGuests"
+                android:layout_alignTop="@+id/textDisplayTitle"
+                android:layout_alignEnd="@+id/view" />
+
+            <TextView
+                android:text="Total Cost: 0kr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalCost"
+                android:textSize="18sp"
+                android:layout_above="@+id/starter_dish"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:text="Instruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:id="@+id/textView"
+                android:layout_above="@+id/main_dish"
+                android:layout_toEndOf="@+id/starter_dish" />
+
+            <ImageView
+                android:src="@drawable/ingredient"
+                android:background="@drawable/border"
+                android:id="@+id/ingredient"
+                android:scaleType="fitXY"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="14dp"
+                android:layout_above="@+id/view"
+                android:layout_marginLeft="30dp"
+                android:clickable="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDisplayTitle"
+                android:layout_alignStart="@+id/textDisplayTitle"
+                android:layout_alignEnd="@+id/dessert_dish"
+                android:layout_marginTop="14dp"
+                android:id="@+id/textDisplay"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
